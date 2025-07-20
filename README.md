@@ -76,6 +76,3 @@ Target: 90+ for Performance and SEO.
 
 Minified assets and optimized images.
 
-Sitemap & Robots.txt (planned):
-
-To be added for better crawlability.
