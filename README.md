@@ -1,40 +1,81 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# HotelDeluxe 🏨
+A modern hotel listing website built with **Next.js**, optimized for SEO and performance.
 
-## Getting Started
+---
 
-First, run the development server:
+## 🔧 Setup Instructions
+
+1. **Clone the repository:**
 
 ```bash
+git clone https://github.com/Ui-Dev-Ram/hoteldeluxe.git
+cd hoteldeluxe
+Install dependencies:
+
+bash
+Copy
+Edit
+npm install
+Run the development server:
+
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Build for production:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+bash
+Copy
+Edit
+npm run build
+npm start
+🏗️ Architecture Overview
+pgsql
+Copy
+Edit
+/app
+  ├── layout.jsx          → Layout wrapper (shared header, metadata, etc.)
+  ├── page.jsx            → Home page (list of hotels)
+  ├── [id]/page.jsx       → Dynamic hotel detail page
+  └── globals.css         → Global styles
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+/data
+  └── hotel.js            → Static data for hotels (can be replaced with API)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+public/
+  └── images/             → Static hotel images
 
-## Learn More
+next.config.mjs           → Next.js configuration
+package.json              → Project metadata and scripts
+Routing: File-based routing via /app directory.
 
-To learn more about Next.js, take a look at the following resources:
+Dynamic Pages: Hotel detail pages generated using dynamic route [id].
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Styling: Tailwind CSS or custom CSS inside globals.css.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🔍 SEO Techniques Used
+Meta Tags:
 
-## Deploy on Vercel
+Dynamic <title> and <meta description> per hotel.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+robots and viewport meta tags added.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# hoteldeluxe
->>>>>>> 177fe93ece99f7826d86cda68a59f3e0825d5542
+Image Optimization:
+
+Used <Image> component from next/image (or plan to add).
+
+Lazy loading enabled.
+
+Clean URLs:
+
+Hotel pages are accessible via /hotels/1, /hotels/2, etc.
+
+Lighthouse Score:
+
+Target: 90+ for Performance and SEO.
+
+Minified assets and optimized images.
+
+Sitemap & Robots.txt (planned):
+
+To be added for better crawlability.
